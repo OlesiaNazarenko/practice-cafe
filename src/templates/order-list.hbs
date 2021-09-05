@@ -1,0 +1,15 @@
+<section id="order-list-{{tableNum}}">
+    <h3>Table {{tableNum}}</h3>
+    <ul>
+        {{#each orderList}}
+        <li id="{{this.id}}">
+            <span>{{this.name}}</span>
+            <button type="button" data-action="add">+</button>
+            <span class='quantity'>0</span>
+            <button type="button" data-action="remove">-</button>
+            <button type="button" data-action="reset">reset</button>
+        </li>
+        {{/each}}
+    </ul>
+    <button type="button" data-action="close">Close order</button>
+</section>
