@@ -40,7 +40,8 @@ const createOrderList = (tableNum, parentNode) => {
     const orderTemplateMarkup = listTmp({ tableNum, orderList: cafe.menu });
     parentNode.insertAdjacentHTML("beforeend", orderTemplateMarkup);
 
-    const orderListContainer = document.getElementById(`ordered-list - ${tableNum}`);
+    const orderListContainer = document.getElementById(`order-list-${tableNum}`);
+    console.log(orderListContainer)
 
     const btnClose = parentNode.querySelector('[data-action="close"]');
    

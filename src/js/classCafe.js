@@ -44,10 +44,10 @@ class Cafe {
         }
         currTable.currentOrder = {...currTable.currentOrder, [dishID]: 1 };
     }
-    removeDish(tableNum, dishID) {
+    removeDish(tableNum, dishId) {
         const currTable = this.findTable(tableNum);
-        if (!currTable.currentOrder || !currTable.currentOrder[dishID]) return;
-        currTable.currentOrder[dishID] -= 1;
+        if (!currTable.currentOrder || !currTable.currentOrder[dishId]) return;
+        currTable.currentOrder[dishId] -= 1;
         currTable.currentOrder = { ...currTable.currentOrder, [dishId]: 0 };
     }
      resetDish(tableNum, dishID) {
